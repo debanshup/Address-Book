@@ -6,7 +6,7 @@ import Routemanager from './route_manager/Routemanager';
 function App() {
   return (
     <div className="App">
-      <p className="h4">Profile</p>
+      {/* <p className="h4"></p> */}
       {/* <Profile/> */}
       <Routemanager/>
     </div>

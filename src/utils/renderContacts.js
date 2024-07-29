@@ -7,7 +7,6 @@ const renderContactName = () => {
             <Link
                 key={contact.name}
                 to={contact.name}
-
                 className="list-group-item bg-dark text-white" >
                 {contact.name}
             </Link>
