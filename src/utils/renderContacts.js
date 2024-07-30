@@ -24,6 +24,7 @@ const getContactDetails = (n) => {
             description: contact.description,
         };
     }
-    return null;
+    
+    // throw new Error('Contact not found'); 
 }
 export { renderContactName, getContactDetails }

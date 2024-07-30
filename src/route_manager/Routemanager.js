@@ -1,18 +1,22 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import Layout from '../component/Layout';
 import Details from '../component/Details';
+import Error from '../component/errorPages/Error';
 
-const Routemanager = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Layout />} >
-          <Route path=':name' element={<Details />} />
-        </Route>
-      </Routes>
-    </Router>
-  )
-}
+const route = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      {
+        path: ':name',
+        element: <Details />,
+        errorElement: <Error />,
 
-export default Routemanager
+      }
+    ]
+  }
+])
+
+export default route

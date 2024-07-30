@@ -1,14 +1,12 @@
-import { Route } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
-import Profile from './Profile';
-import Routemanager from './route_manager/Routemanager';
+import route from './route_manager/Routemanager';
 
 function App() {
   return (
     <div className="App">
       {/* <p className="h4"></p> */}
-      {/* <Profile/> */}
-      <Routemanager/>
+      <RouterProvider router={route} />
     </div>
   );
 }
