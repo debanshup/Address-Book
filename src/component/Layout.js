@@ -7,7 +7,7 @@ const Layout = () => {
     <div className="container-fluid row border" style={{ height: '100vh' }}>
       <div className="col-4 border-right p-3 overflow-auto" style={{ maxHeight: '100vh' }}>
         <h3>Names</h3>
-        <ul className="list-group">
+        <ul className="list-group rounded-0">
           {renderContactName()}
         </ul>
       </div>

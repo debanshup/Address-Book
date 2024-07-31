@@ -1,0 +1,17 @@
+.color {
+    background-color: #868B8E;
+    color: #EEEDE7;
+}
+.margin {
+    margin-bottom: 1px;
+}
+.color:hover {
+    background-color: #B9B7BD;
+    color: white;
+}
+.ta {
+    text-align: center;
+}
+.br {
+    /* border-radius: 5px; */
+}

@@ -1,13 +1,13 @@
 import { contacts } from '../data/contacts'
 import { Link } from 'react-router-dom'
-
+import './styles/style.css'
 const renderContactName = () => {
     return contacts.map(
         contact => (
             <Link
                 key={contact.name}
                 to={contact.name}
-                className="list-group-item bg-dark text-white" >
+                className="list-group-item border-0 rounded br margin ta color " >
                 {contact.name}
             </Link>
 
@@ -25,6 +25,6 @@ const getContactDetails = (n) => {
         };
     }
     
-    // throw new Error('Contact not found'); 
+    throw new Error('Contact not found'); 
 }
 export { renderContactName, getContactDetails }
