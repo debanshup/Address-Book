@@ -3,15 +3,17 @@ import { Link } from 'react-router-dom'
 import './styles/style.css'
 const renderContactName = () => {
     return contacts.map(
-        contact => (
+        contact => {
+            
+            return (
             <Link
-                key={contact.name}
+                key={contact.img}
                 to={contact.name}
                 className="list-group-item border-0 rounded br margin ta color " >
                 {contact.name}
             </Link>
 
-        )
+        )}
     )
 }
 const getContactDetails = (n) => {
@@ -27,4 +29,7 @@ const getContactDetails = (n) => {
     
     throw new Error('Contact not found'); 
 }
-export { renderContactName, getContactDetails }
+const matchedContact = (name) => {
+    return contacts.find(contact => contact.name.toLowerCase === name.toLowerCase)
+}
+export { renderContactName, getContactDetails, matchedContact }

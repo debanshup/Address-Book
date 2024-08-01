@@ -9,6 +9,14 @@ const Details = () => {
     if (contact !== null) {
         return (
             <div className='container-fluid row'>
+                <div className="col-12 d-flex justify-content-end mb-3">
+                    <button className="btn btn-primary me-2">
+                        <i className='bi bi-pencil'></i>
+                    </button>
+                    <button className="btn btn-danger">
+                        <i className='bi bi-trash'></i>
+                    </button>
+                </div>
                 <div className="col-12 col-md-5 mb-3 mb-md-0">
                     <img src={contact.img} alt="contact_img" className="img-fluid rounded" />
                 </div>
@@ -23,9 +31,9 @@ const Details = () => {
                     </p>
                 </div>
             </div>
-    
+
         )
-    } 
+    }
     return null
 }
 
