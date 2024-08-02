@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Outlet, useSearchParams } from 'react-router-dom'
+import { Outlet, useSearchParams, Link } from 'react-router-dom'
 import { renderContactName } from '../utils/renderContacts'
 import { matchedContact } from '../utils/renderContacts'
 
@@ -9,16 +9,20 @@ const Layout = () => {
   const detailsRef = useRef(null)
   const [contact, setContact] = useState(null)
   const [dropdownVisible, setdropdownVisible] = useState(false)
-  const [searchTerm, setsearchTerm] = useState('')
+  // const [searchTerm, setsearchTerm] = useState('')
   const [searchParam, setSearchParam] = useSearchParams();
   const searchedContactName = searchParam.get('name') // returns current value of query
 
   const handleSearchChange = (e) => {
     setContact(null)
-    const name = e.target.value // should be exactly same with key of searchParam.get
+    const name = searchbarRef.current.value // should be exactly same with key of searchParam.get
+    // console.log(name);
     setSearchParam({ name }) // sets  searched param 
-    setsearchTerm(name)
+
+    // setsearchTerm(name)
     setdropdownVisible(true)  // show dropdown
+    // console.log(searchedContactName);
+    // (contact)
   }
 
   const handleSearchClick = () => {
@@ -46,10 +50,14 @@ const Layout = () => {
 
   useEffect(() => {
     if (searchedContactName) {
+      // console.log(searchedContactName);
+
       const contact = matchedContact(searchedContactName)
+      // console.log(contact);
+
+      if (contact) console.log(contact.name);
       setContact(contact)
-    } else {
-      setContact(null)
+
     }
 
   }, [searchedContactName])
@@ -58,13 +66,15 @@ const Layout = () => {
   return (
     <div className="container-fluid row border" style={{ height: '100vh' }}>
       <div className="col-4 border-right p-3 overflow-auto" style={{ maxHeight: '100vh' }}>
-        <div className='d-flex align-items-center mb-3'>
+
+
+        <div className='d-flex align-items-center p-1 sticky-top mb-3 '>
 
           {/* search  */}
           <input
             ref={searchbarRef}
             type="text"
-            value={searchTerm}
+            // value={}
             onChange={handleSearchChange}
             onClick={
               () => {
@@ -75,24 +85,23 @@ const Layout = () => {
             className="form-control m-2"
           />
 
+
           {/* Dropdown Menu */}
-          {/* <div className="dropdown-menu show list-group mt-5 rounded-0" ref={dropdownRef} style={{ zIndex: 1050 }}>
-            <p>hi</p>
-            <p>hello</p>
-            <p>hello</p>
-          </div> */}
+
           {dropdownVisible && (
-            <div className="dropdown-menu show list-group rounded-0" ref={dropdownRef} style={{ zIndex: 1050, marginTop: '100px' }}>
+            <ul className="dropdown-menu show list-group p-1 rounded" ref={dropdownRef} style={{ zIndex: 1050, marginTop: '100px', minHeight: '50px' }}>
               {contact ? (
-                <li className='list-group-item'>
+                <Link key={contact.image} to={contact.name} className='list-group-item text-primary border-0'>
                   {contact.name}
-                </li>
+                </Link>
               ) : searchedContactName && (
-                <p>no contact found</p>
+                <p className='text-secondary'>no contact found</p>
               )}
-            </div>
+            </ul>
           )}
         </div>
+
+
         <ul className="list-group rounded-0">
           {renderContactName()}
         </ul>
@@ -102,6 +111,21 @@ const Layout = () => {
           {/* <h3>Details</h3> */}
         </div>
         <div className="container border rounded mb-4 p-3">
+
+          {/* debugging  */}
+          {/* <button className='btn btn-dark'
+        onClick={
+          (e) => {
+            e.preventDefault()
+            console.log(contact.name);
+            
+          }
+        }
+        >
+            click
+          </button>
+
+ */}
           <Outlet />
         </div>
       </div>

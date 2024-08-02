@@ -1,359 +1,352 @@
-export let contacts = [
+export const contacts = [
     {
-        "name": "John Doe",
-        "image": "https://via.placeholder.com/150",
-        "address": "123 Main St, Anytown, USA",
-        "description": "A friendly person who loves programming.",
-        "mobile": "555-123-4567"
+        name: "Jane Smith",
+        image: "https://randomuser.me/api/portraits/women/1.jpg",
+        address: "456 Oak St, Othertown, USA",
+        description: "An avid reader and coffee enthusiast.",
+        mobile: "555-234-5678"
     },
     {
-        "name": "Jane Smith",
-        "image": "https://via.placeholder.com/150",
-        "address": "456 Oak St, Othertown, USA",
-        "description": "An avid reader and coffee enthusiast.",
-        "mobile": "555-234-5678"
+        name: "John Doe",
+        image: "https://randomuser.me/api/portraits/men/2.jpg",
+        address: "789 Pine St, Anothertown, USA",
+        description: "A software developer and hiking fan.",
+        mobile: "555-345-6789"
     },
     {
-        "name": "Alice Johnson",
-        "image": "https://via.placeholder.com/150",
-        "address": "789 Pine St, Sometown, USA",
-        "description": "Enjoys hiking and outdoor adventures.",
-        "mobile": "555-345-6789"
+        name: "Alice Johnson",
+        image: "https://randomuser.me/api/portraits/women/3.jpg",
+        address: "123 Maple St, Thistown, USA",
+        description: "Loves painting and outdoor adventures.",
+        mobile: "555-456-7890"
     },
     {
-        "name": "Bob Brown",
-        "image": "https://via.placeholder.com/150",
-        "address": "101 Maple St, Everytown, USA",
-        "description": "A software developer with a passion for technology.",
-        "mobile": "555-456-7890"
+        name: "Bob Brown",
+        image: "https://randomuser.me/api/portraits/men/4.jpg",
+        address: "234 Elm St, Thatown, USA",
+        description: "Enjoys cooking and playing the guitar.",
+        mobile: "555-567-8901"
     },
     {
-        "name": "Charlie Davis",
-        "image": "https://via.placeholder.com/150",
-        "address": "202 Birch St, Newtown, USA",
-        "description": "A graphic designer who loves art and creativity.",
-        "mobile": "555-567-8901"
+        name: "Cathy Green",
+        image: "https://randomuser.me/api/portraits/women/5.jpg",
+        address: "345 Birch St, Sometown, USA",
+        description: "A passionate gardener and bird watcher.",
+        mobile: "555-678-9012"
     },
     {
-        "name": "David Wilson",
-        "image": "https://via.placeholder.com/150",
-        "address": "303 Cedar St, Oldtown, USA",
-        "description": "A musician who enjoys playing guitar.",
-        "mobile": "555-678-9012"
+        name: "David Black",
+        image: "https://randomuser.me/api/portraits/men/6.jpg",
+        address: "456 Cedar St, Everytown, USA",
+        description: "A fitness enthusiast and movie buff.",
+        mobile: "555-789-0123"
     },
     {
-        "name": "Eve Martinez",
-        "image": "https://via.placeholder.com/150",
-        "address": "404 Elm St, Nexttown, USA",
-        "description": "A teacher who is passionate about education.",
-        "mobile": "555-789-0123"
+        name: "Ella White",
+        image: "https://randomuser.me/api/portraits/women/7.jpg",
+        address: "567 Spruce St, Towertown, USA",
+        description: "Loves traveling and photography.",
+        mobile: "555-890-1234"
     },
     {
-        "name": "Frank White",
-        "image": "https://via.placeholder.com/150",
-        "address": "505 Ash St, Littletown, USA",
-        "description": "A writer who loves crafting stories.",
-        "mobile": "555-890-1234"
+        name: "Frank Miller",
+        image: "https://randomuser.me/api/portraits/men/8.jpg",
+        address: "678 Fir St, Smalltown, USA",
+        description: "Enjoys woodworking and camping.",
+        mobile: "555-901-2345"
     },
     {
-        "name": "Grace Lee",
-        "image": "https://via.placeholder.com/150",
-        "address": "606 Fir St, Bigtown, USA",
-        "description": "A chef who enjoys experimenting with new recipes.",
-        "mobile": "555-901-2345"
+        name: "Grace Lee",
+        image: "https://randomuser.me/api/portraits/women/9.jpg",
+        address: "789 Poplar St, Bigtown, USA",
+        description: "A yoga instructor and animal lover.",
+        mobile: "555-012-3456"
     },
     {
-        "name": "Henry Young",
-        "image": "https://via.placeholder.com/150",
-        "address": "707 Spruce St, Smalltown, USA",
-        "description": "A fitness enthusiast who loves working out.",
-        "mobile": "555-012-3456"
+        name: "Henry King",
+        image: "https://randomuser.me/api/portraits/men/10.jpg",
+        address: "890 Walnut St, Hometown, USA",
+        description: "An avid cyclist and music enthusiast.",
+        mobile: "555-123-4567"
     },
     {
-        "name": "Ivy Harris",
-        "image": "https://via.placeholder.com/150",
-        "address": "808 Willow St, Uptown, USA",
-        "description": "A fashion designer with a unique sense of style.",
-        "mobile": "555-123-4568"
+        name: "Isabel Walker",
+        image: "https://randomuser.me/api/portraits/women/11.jpg",
+        address: "901 Oak St, Othertown, USA",
+        description: "A foodie and fitness trainer.",
+        mobile: "555-234-5678"
     },
     {
-        "name": "Jack Lewis",
-        "image": "https://via.placeholder.com/150",
-        "address": "909 Poplar St, Downtowm, USA",
-        "description": "A photographer who enjoys capturing moments.",
-        "mobile": "555-234-5679"
+        name: "Jack Turner",
+        image: "https://randomuser.me/api/portraits/men/12.jpg",
+        address: "123 Pine St, Anothertown, USA",
+        description: "A tech enthusiast and gamer.",
+        mobile: "555-345-6789"
     },
     {
-        "name": "Kelly Clark",
-        "image": "https://via.placeholder.com/150",
-        "address": "1010 Redwood St, Midtown, USA",
-        "description": "A scientist who loves conducting experiments.",
-        "mobile": "555-345-6780"
+        name: "Kelly Adams",
+        image: "https://randomuser.me/api/portraits/women/13.jpg",
+        address: "234 Maple St, Thistown, USA",
+        description: "Loves baking and reading novels.",
+        mobile: "555-456-7890"
     },
     {
-        "name": "Liam Walker",
-        "image": "https://via.placeholder.com/150",
-        "address": "1111 Chestnut St, Centertown, USA",
-        "description": "A student who is passionate about learning.",
-        "mobile": "555-456-7891"
+        name: "Liam Harris",
+        image: "https://randomuser.me/api/portraits/men/14.jpg",
+        address: "345 Elm St, Thatown, USA",
+        description: "A car enthusiast and dog lover.",
+        mobile: "555-567-8901"
     },
     {
-        "name": "Mia Robinson",
-        "image": "https://via.placeholder.com/150",
-        "address": "1212 Walnut St, Easttown, USA",
-        "description": "A dancer who loves performing on stage.",
-        "mobile": "555-567-8902"
+        name: "Mia Clark",
+        image: "https://randomuser.me/api/portraits/women/15.jpg",
+        address: "456 Birch St, Sometown, USA",
+        description: "Passionate about music and arts.",
+        mobile: "555-678-9012"
     },
     {
-        "name": "Noah King",
-        "image": "https://via.placeholder.com/150",
-        "address": "1313 Beech St, Westtown, USA",
-        "description": "An engineer who enjoys building things.",
-        "mobile": "555-678-9013"
+        name: "Noah Lewis",
+        image: "https://randomuser.me/api/portraits/men/16.jpg",
+        address: "567 Cedar St, Everytown, USA",
+        description: "A sports fan and loves hiking.",
+        mobile: "555-789-0123"
     },
     {
-        "name": "Olivia Scott",
-        "image": "https://via.placeholder.com/150",
-        "address": "1414 Hickory St, Northtown, USA",
-        "description": "A traveler who loves exploring new places.",
-        "mobile": "555-789-0124"
+        name: "Olivia Hall",
+        image: "https://randomuser.me/api/portraits/women/17.jpg",
+        address: "678 Spruce St, Towertown, USA",
+        description: "Enjoys painting and wine tasting.",
+        mobile: "555-890-1234"
     },
     {
-        "name": "Paul Green",
-        "image": "https://via.placeholder.com/150",
-        "address": "1515 Magnolia St, Southtown, USA",
-        "description": "A gardener who enjoys growing plants.",
-        "mobile": "555-890-1235"
+        name: "Peter Scott",
+        image: "https://randomuser.me/api/portraits/men/18.jpg",
+        address: "789 Fir St, Smalltown, USA",
+        description: "Loves fishing and playing the piano.",
+        mobile: "555-901-2345"
     },
     {
-        "name": "Quincy Baker",
-        "image": "https://via.placeholder.com/150",
-        "address": "1616 Palm St, Rivertown, USA",
-        "description": "A software tester with an eye for detail.",
-        "mobile": "555-901-2346"
+        name: "Quinn Hill",
+        image: "https://randomuser.me/api/portraits/women/19.jpg",
+        address: "890 Poplar St, Bigtown, USA",
+        description: "A marathon runner and bookworm.",
+        mobile: "555-012-3456"
     },
     {
-        "name": "Rachel Adams",
-        "image": "https://via.placeholder.com/150",
-        "address": "1717 Cypress St, Hilltown, USA",
-        "description": "A marketing specialist who loves creativity.",
-        "mobile": "555-012-3457"
+        name: "Ryan Young",
+        image: "https://randomuser.me/api/portraits/men/20.jpg",
+        address: "901 Walnut St, Hometown, USA",
+        description: "Enjoys photography and cooking.",
+        mobile: "555-123-4567"
     },
     {
-        "name": "Steve Allen",
-        "image": "https://via.placeholder.com/150",
-        "address": "1818 Dogwood St, Lakeside, USA",
-        "description": "A doctor who is passionate about health.",
-        "mobile": "555-123-4569"
+        name: "Sophia Martinez",
+        image: "https://randomuser.me/api/portraits/women/21.jpg",
+        address: "123 Oak St, Othertown, USA",
+        description: "A tech enthusiast and traveler.",
+        mobile: "555-234-5678"
     },
     {
-        "name": "Tina Carter",
-        "image": "https://via.placeholder.com/150",
-        "address": "1919 Olive St, Riverside, USA",
-        "description": "An artist who enjoys painting landscapes.",
-        "mobile": "555-234-5670"
+        name: "Thomas Wilson",
+        image: "https://randomuser.me/api/portraits/men/22.jpg",
+        address: "234 Pine St, Anothertown, USA",
+        description: "A history buff and chess player.",
+        mobile: "555-345-6789"
     },
     {
-        "name": "Uma Murphy",
-        "image": "https://via.placeholder.com/150",
-        "address": "2020 Linden St, Bayside, USA",
-        "description": "A historian who loves uncovering the past.",
-        "mobile": "555-345-6781"
+        name: "Uma Robinson",
+        image: "https://randomuser.me/api/portraits/women/23.jpg",
+        address: "345 Maple St, Thistown, USA",
+        description: "Enjoys yoga and gardening.",
+        mobile: "555-456-7890"
     },
     {
-        "name": "Victor Campbell",
-        "image": "https://via.placeholder.com/150",
-        "address": "2121 Sycamore St, Seaside, USA",
-        "description": "A programmer who enjoys coding challenges.",
-        "mobile": "555-456-7892"
+        name: "Victor Anderson",
+        image: "https://randomuser.me/api/portraits/men/24.jpg",
+        address: "456 Elm St, Thatown, USA",
+        description: "A cycling enthusiast and nature lover.",
+        mobile: "555-567-8901"
     },
     {
-        "name": "Wendy Bell",
-        "image": "https://via.placeholder.com/150",
-        "address": "2222 Maple St, Townsville, USA",
-        "description": "A chef who specializes in Italian cuisine.",
-        "mobile": "555-567-8903"
+        name: "Wendy Campbell",
+        image: "https://randomuser.me/api/portraits/women/25.jpg",
+        address: "567 Birch St, Sometown, USA",
+        description: "A passionate baker and dog lover.",
+        mobile: "555-678-9012"
     },
     {
-        "name": "Xander Rivera",
-        "image": "https://via.placeholder.com/150",
-        "address": "2323 Birch St, Villagetown, USA",
-        "description": "A musician who plays the violin.",
-        "mobile": "555-678-9014"
+        name: "Xander Reed",
+        image: "https://randomuser.me/api/portraits/men/26.jpg",
+        address: "678 Cedar St, Everytown, USA",
+        description: "Loves running and playing guitar.",
+        mobile: "555-789-0123"
     },
     {
-        "name": "Yara Flores",
-        "image": "https://via.placeholder.com/150",
-        "address": "2424 Pine St, Hamletville, USA",
-        "description": "A teacher who loves inspiring students.",
-        "mobile": "555-789-0125"
+        name: "Yara Cooper",
+        image: "https://randomuser.me/api/portraits/women/27.jpg",
+        address: "789 Spruce St, Towertown, USA",
+        description: "Enjoys drawing and horseback riding.",
+        mobile: "555-890-1234"
     },
     {
-        "name": "Zane Hughes",
-        "image": "https://via.placeholder.com/150",
-        "address": "2525 Elm St, Citytown, USA",
-        "description": "A writer who enjoys crafting novels.",
-        "mobile": "555-890-1236"
+        name: "Zachary Morgan",
+        image: "https://randomuser.me/api/portraits/men/28.jpg",
+        address: "890 Fir St, Smalltown, USA",
+        description: "A video game developer and movie fan.",
+        mobile: "555-901-2345"
     },
     {
-        "name": "Adam Price",
-        "image": "https://via.placeholder.com/150",
-        "address": "2626 Fir St, Metropolis, USA",
-        "description": "A fitness trainer who loves helping people.",
-        "mobile": "555-901-2347"
+        name: "Abigail Foster",
+        image: "https://randomuser.me/api/portraits/women/29.jpg",
+        address: "901 Poplar St, Bigtown, USA",
+        description: "A graphic designer and cat lover.",
+        mobile: "555-012-3456"
     },
     {
-        "name": "Bella Howard",
-        "image": "https://via.placeholder.com/150",
-        "address": "2727 Spruce St, Megatown, USA",
-        "description": "An architect who designs modern buildings.",
-        "mobile": "555-012-3458"
+        name: "Benjamin Powell",
+        image: "https://randomuser.me/api/portraits/men/30.jpg",
+        address: "123 Walnut St, Hometown, USA",
+        description: "Enjoys painting and playing chess.",
+        mobile: "555-123-4567"
     },
     {
-        "name": "Caleb Ward",
-        "image": "https://via.placeholder.com/150",
-        "address": "2828 Willow St, Portville, USA",
-        "description": "A chef who loves experimenting with spices.",
-        "mobile": "555-123-4560"
+        name: "Chloe Brooks",
+        image: "https://randomuser.me/api/portraits/women/31.jpg",
+        address: "234 Oak St, Othertown, USA",
+        description: "A photographer and nature enthusiast.",
+        mobile: "555-234-5678"
     },
     {
-        "name": "Diana Brooks",
-        "image": "https://via.placeholder.com/150",
-        "address": "2929 Poplar St, Hamlet, USA",
-        "description": "A dancer who enjoys performing ballet.",
-        "mobile": "555-234-5671"
+        name: "Daniel Price",
+        image: "https://randomuser.me/api/portraits/men/32.jpg",
+        address: "345 Pine St, Anothertown, USA",
+        description: "Loves coding and hiking.",
+        mobile: "555-345-6789"
     },
     {
-        "name": "Ethan Russell",
-        "image": "https://via.placeholder.com/150",
-        "address": "3030 Redwood St, Urbantown, USA",
-        "description": "An artist who creates abstract paintings.",
-        "mobile": "555-345-6782"
+        name: "Emily James",
+        image: "https://randomuser.me/api/portraits/women/33.jpg",
+        address: "456 Maple St, Thistown, USA",
+        description: "Enjoys reading and painting.",
+        mobile: "555-456-7890"
     },
     {
-        "name": "Fiona Cooper",
-        "image": "https://via.placeholder.com/150",
-        "address": "3131 Chestnut St, Ruralville, USA",
-        "description": "A scientist who loves discovering new things.",
-        "mobile": "555-456-7893"
+        name: "Fiona Stewart",
+        image: "https://randomuser.me/api/portraits/women/34.jpg",
+        address: "567 Elm St, Thatown, USA",
+        description: "A fitness enthusiast and dog lover.",
+        mobile: "555-567-8901"
     },
     {
-        "name": "George Morgan",
-        "image": "https://via.placeholder.com/150",
-        "address": "3232 Walnut St, Hillside, USA",
-        "description": "A writer who enjoys crafting short stories.",
-        "mobile": "555-567-8904"
+        name: "George Taylor",
+        image: "https://randomuser.me/api/portraits/men/35.jpg",
+        address: "678 Birch St, Sometown, USA",
+        description: "Loves hiking and photography.",
+        mobile: "555-678-9012"
     },
     {
-        "name": "Hannah Reed",
-        "image": "https://via.placeholder.com/150",
-        "address": "3333 Beech St, Valleytown, USA",
-        "description": "A programmer who enjoys building apps.",
-        "mobile": "555-678-9015"
+        name: "Hannah White",
+        image: "https://randomuser.me/api/portraits/women/36.jpg",
+        address: "789 Cedar St, Everytown, USA",
+        description: "Enjoys baking and reading novels.",
+        mobile: "555-789-0123"
     },
     {
-        "name": "Isaac Bailey",
-        "image": "https://via.placeholder.com/150",
-        "address": "3434 Magnolia St, Rivervale, USA",
-        "description": "A musician who plays the piano.",
-        "mobile": "555-789-0126"
+        name: "Ian Davis",
+        image: "https://randomuser.me/api/portraits/men/37.jpg",
+        address: "890 Spruce St, Towertown, USA",
+        description: "A music lover and marathon runner.",
+        mobile: "555-890-1234"
     },
     {
-        "name": "Julia Kelly",
-        "image": "https://via.placeholder.com/150",
-        "address": "3535 Palm St, Forestville, USA",
-        "description": "A teacher who loves teaching math.",
-        "mobile": "555-890-1237"
+        name: "Jessica Allen",
+        image: "https://randomuser.me/api/portraits/women/38.jpg",
+        address: "901 Fir St, Smalltown, USA",
+        description: "Enjoys gardening and cooking.",
+        mobile: "555-901-2345"
     },
     {
-        "name": "Kevin Edwards",
-        "image": "https://via.placeholder.com/150",
-        "address": "3636 Cypress St, Meadowtown, USA",
-        "description": "An engineer who designs innovative solutions.",
-        "mobile": "555-901-2348"
+        name: "Kevin Evans",
+        image: "https://randomuser.me/api/portraits/men/39.jpg",
+        address: "123 Poplar St, Bigtown, USA",
+        description: "A car enthusiast and tech geek.",
+        mobile: "555-012-3456"
     },
     {
-        "name": "Lily Turner",
-        "image": "https://via.placeholder.com/150",
-        "address": "3737 Dogwood St, Greentown, USA",
-        "description": "A gardener who enjoys growing vegetables.",
-        "mobile": "555-012-3459"
+        name: "Lily Perez",
+        image: "https://randomuser.me/api/portraits/women/40.jpg",
+        address: "234 Walnut St, Hometown, USA",
+        description: "Loves painting and yoga.",
+        mobile: "555-123-4567"
     },
     {
-        "name": "Mason Parker",
-        "image": "https://via.placeholder.com/150",
-        "address": "3838 Olive St, Bluetown, USA",
-        "description": "A doctor who specializes in pediatrics.",
-        "mobile": "555-123-4561"
+        name: "Matthew Rivera",
+        image: "https://randomuser.me/api/portraits/men/41.jpg",
+        address: "345 Oak St, Othertown, USA",
+        description: "A software engineer and chess player.",
+        mobile: "555-234-5678"
     },
     {
-        "name": "Natalie Brooks",
-        "image": "https://via.placeholder.com/150",
-        "address": "3939 Linden St, Pinktown, USA",
-        "description": "A historian who loves studying ancient civilizations.",
-        "mobile": "555-234-5672"
+        name: "Natalie Barnes",
+        image: "https://randomuser.me/api/portraits/women/42.jpg",
+        address: "456 Pine St, Anothertown, USA",
+        description: "Enjoys reading and fitness.",
+        mobile: "555-345-6789"
     },
     {
-        "name": "Owen Cox",
-        "image": "https://via.placeholder.com/150",
-        "address": "4040 Sycamore St, Orangetown, USA",
-        "description": "A software tester who ensures quality.",
-        "mobile": "555-345-6783"
+        name: "Oliver Sanders",
+        image: "https://randomuser.me/api/portraits/men/43.jpg",
+        address: "567 Maple St, Thistown, USA",
+        description: "A nature lover and photographer.",
+        mobile: "555-456-7890"
     },
     {
-        "name": "Peyton Diaz",
-        "image": "https://via.placeholder.com/150",
-        "address": "4141 Maple St, Purpletown, USA",
-        "description": "A chef who enjoys making desserts.",
-        "mobile": "555-456-7894"
+        name: "Paige Kelly",
+        image: "https://randomuser.me/api/portraits/women/44.jpg",
+        address: "678 Elm St, Thatown, USA",
+        description: "Enjoys dancing and singing.",
+        mobile: "555-567-8901"
     },
     {
-        "name": "Quinn Foster",
-        "image": "https://via.placeholder.com/150",
-        "address": "4242 Birch St, Blacktown, USA",
-        "description": "A dancer who loves hip-hop.",
-        "mobile": "555-567-8905"
+        name: "Quentin Foster",
+        image: "https://randomuser.me/api/portraits/men/45.jpg",
+        address: "789 Birch St, Sometown, USA",
+        description: "Avid runner and music lover.",
+        mobile: "555-678-9012"
     },
     {
-        "name": "Riley Gonzalez",
-        "image": "https://via.placeholder.com/150",
-        "address": "4343 Pine St, Whitetown, USA",
-        "description": "A teacher who enjoys teaching science.",
-        "mobile": "555-678-9016"
+        name: "Rachel Jenkins",
+        image: "https://randomuser.me/api/portraits/women/46.jpg",
+        address: "890 Cedar St, Everytown, USA",
+        description: "Enjoys knitting and playing the piano.",
+        mobile: "555-789-0123"
     },
     {
-        "name": "Sophie Hayes",
-        "image": "https://via.placeholder.com/150",
-        "address": "4444 Elm St, Redtown, USA",
-        "description": "A programmer who loves solving puzzles.",
-        "mobile": "555-789-0127"
+        name: "Sam Brooks",
+        image: "https://randomuser.me/api/portraits/men/47.jpg",
+        address: "901 Spruce St, Towertown, USA",
+        description: "Loves hiking and photography.",
+        mobile: "555-890-1234"
     },
     {
-        "name": "Tyler Lee",
-        "image": "https://via.placeholder.com/150",
-        "address": "4545 Fir St, Yellowtown, USA",
-        "description": "An artist who enjoys sculpting.",
-        "mobile": "555-890-1238"
+        name: "Tina Ross",
+        image: "https://randomuser.me/api/portraits/women/48.jpg",
+        address: "123 Fir St, Smalltown, USA",
+        description: "A bookworm and coffee enthusiast.",
+        mobile: "555-901-2345"
     },
     {
-        "name": "Ursula Kim",
-        "image": "https://via.placeholder.com/150",
-        "address": "4646 Spruce St, Tealtown, USA",
-        "description": "A scientist who researches environmental issues.",
-        "mobile": "555-901-2349"
+        name: "Ulysses Ward",
+        image: "https://randomuser.me/api/portraits/men/49.jpg",
+        address: "234 Poplar St, Bigtown, USA",
+        description: "A tech geek and nature lover.",
+        mobile: "555-012-3456"
     },
     {
-        "name": "Victor Moore",
-        "image": "https://via.placeholder.com/150",
-        "address": "4747 Willow St, Brownsville, USA",
-        "description": "A musician who plays the drums.",
-        "mobile": "555-012-3450"
-    },
-    {
-        "name": "Willow Adams",
-        "image": "https://via.placeholder.com/150",
-        "address": "4848 Poplar St, Silvercity, USA",
-        "description": "A fitness trainer who loves yoga.",
-        "mobile": "555-123-4562"
+        name: "Victoria Hughes",
+        image: "https://randomuser.me/api/portraits/women/50.jpg",
+        address: "345 Walnut St, Hometown, USA",
+        description: "Enjoys painting and music.",
+        mobile: "555-123-4567"
     }
-]
+];

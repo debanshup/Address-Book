@@ -30,6 +30,10 @@ const getContactDetails = (n) => {
     throw new Error('Contact not found'); 
 }
 const matchedContact = (name) => {
-    return contacts.find(contact => contact.name.toLowerCase === name.toLowerCase)
+    const contact = contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase())
+    if(contact) console.log(contact.name);
+    return contact
+    
+    
 }
 export { renderContactName, getContactDetails, matchedContact }
