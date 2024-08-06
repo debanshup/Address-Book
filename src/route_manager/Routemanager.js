@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Layout from '../component/Layout';
 import Details from '../component/Details';
 import Error from '../component/errorPages/Error';
+import EditPage from '../component/EditPage';
 
 const route = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const route = createBrowserRouter([
         errorElement: <Error />,
 
       }
+
     ]
   }
 ])

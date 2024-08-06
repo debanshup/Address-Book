@@ -1,0 +1,18 @@
+/* Ensure the dropdown menu is properly aligned and sticky */
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+  }
+  
+  /* Ensure the dropdown width matches the search bar width */
+  .dropdown-menu {
+    width: 100%;
+    position: absolute;
+  }
+  
+  /* Additional styling for smooth appearance */
+  .form-control {
+    width: calc(100% - 2 * 0.5rem); /* Adjust according to padding/margins */
+  }
+  

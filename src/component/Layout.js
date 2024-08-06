@@ -65,10 +65,10 @@ const Layout = () => {
 
   return (
     <div className="container-fluid row border" style={{ height: '100vh' }}>
-      <div className="col-4 border-right p-3 overflow-auto" style={{ maxHeight: '100vh' }}>
+      <div className="col-4 border-right rounded p-3 overflow-auto" style={{ maxHeight: '100vh' }}>
 
 
-        <div className='d-flex align-items-center p-1 sticky-top mb-3 '>
+        <div className='d-flex align-items-center p-1 sticky-top mb-3'>
 
           {/* search  */}
           <input
@@ -95,7 +95,7 @@ const Layout = () => {
                   {contact.name}
                 </Link>
               ) : searchedContactName && (
-                <p className='text-secondary'>no contact found</p>
+                <p className='text-secondary'>no contact found </p>
               )}
             </ul>
           )}
@@ -107,9 +107,7 @@ const Layout = () => {
         </ul>
       </div>
       <div className="col-8 p-3 overflow-auto" ref={detailsRef} style={{ maxHeight: '100vh' }}>
-        <div>
-          {/* <h3>Details</h3> */}
-        </div>
+
         <div className="container border rounded mb-4 p-3">
 
           {/* debugging  */}
