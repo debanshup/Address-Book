@@ -20,13 +20,7 @@ const renderContactName = () => {
 const getContactDetails = (n) => {
     const contact = contacts.find(contact => contact.name === n)
     if (contact) {
-        return {
-            name: contact.name,
-            img: contact.image,
-            mobile: contact.mobile,
-            address: contact.address,
-            description: contact.description,
-        };
+        return contact
     }
 
     throw new Error('Contact not found');

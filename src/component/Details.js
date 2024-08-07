@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, Outlet, useNavigate, } from 'react-router-dom'
 import { getContactDetails } from '../utils/renderContacts'
 const Details = () => {
@@ -14,7 +14,7 @@ const Details = () => {
     }
 
     const handleInputChange = (e) => {
-        console.log(contact.name);
+        // console.log(contact.name);
         
 
         const { name, value } = e.target
@@ -28,6 +28,7 @@ const Details = () => {
     // click listeners
     const handleEditClick = () => {
         setIsEditing(true)
+        setEditableContact(contact) // set current contact editable
     }
     const handleSaveClick = () => {
         // todo add save logic
@@ -39,10 +40,20 @@ const Details = () => {
     }
 
     // alert(contact)
+    useEffect(() => {
+      
+        
+    
+      return () => {
+        
+      }
+    }, [])
+    
     if (contact !== null) {
         return (
             <div className='container-fluid row'>
                 <div className="col-12 d-flex justify-content-end mb-3">
+
                     {isEditing ? (
                         <>
                             <button className="btn btn-success me-2" onClick={handleSaveClick}>
@@ -72,7 +83,7 @@ const Details = () => {
                         isEditing ? (
                             <>
                             <div>
-                            <img src={editableContact.img} alt="contact_img" className="img-fluid rounded" />
+                            <img src={editableContact.image} alt="contact_img" className="img-fluid rounded" />
                             </div>
                                 <p className="h6">Image:
                                     <input type="file"
@@ -84,7 +95,7 @@ const Details = () => {
                                 </p>
                             </>
                         ) : (
-                            <img src={contact.img} alt="contact_img" className="img-fluid rounded" />
+                            <img src={contact.image} alt="contact_img" className="img-fluid rounded" />
 
                         )
                     }
@@ -145,9 +156,7 @@ const Details = () => {
                         )}
                     </p>
                 </div>
-                <div>
-                    <Outlet />
-                </div>
+
             </div>
         );
     }
