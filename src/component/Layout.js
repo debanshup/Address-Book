@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Outlet, useSearchParams, Link } from 'react-router-dom'
 import { renderContactName } from '../utils/renderContacts'
 import { matchedContact } from '../utils/renderContacts'
+import './styles/styles.css'
 
 const Layout = () => {
   const dropdownRef = useRef(null)
@@ -13,7 +14,7 @@ const Layout = () => {
   const [searchParam, setSearchParam] = useSearchParams();
   const searchedContactName = searchParam.get('name') // returns current value of query
 
-  const handleSearchChange = (e) => {
+  const handleSearchChange = () => {
     setContact(null)
     const name = searchbarRef.current.value // should be exactly same with key of searchParam.get
     // console.log(name);
@@ -70,36 +71,41 @@ const Layout = () => {
 
         <div className='d-flex align-items-center p-1 sticky-top mb-3'>
 
-          {/* search  */}
-          <input
-            ref={searchbarRef}
-            type="text"
-            // value={}
-            onChange={handleSearchChange}
-            onClick={
-              () => {
-                handleSearchClick()
-              }
-            }
-            placeholder="Search..."
-            className="form-control m-2"
-          />
+          {/* Search Bar */}
+          <div className="input-group">
+            <input
+              ref={searchbarRef}
+              type="text"
+              onChange={handleSearchChange}
+              onClick={handleSearchClick}
+              placeholder="Search..."
+              className="form-control rounded"
+            />
 
+            {/* Dropdown Menu */}
+            {dropdownVisible && (
+              <div className="dropdown-menu show w-100 custom-scrollbar" ref={dropdownRef} style={{ zIndex: 1050, 
+              position: 'absolute', 
+              top: '100%', 
+              left: 0, 
+              maxHeight: '20vh',
+               overflowY: 'scroll'
+               }}>
+                {contact ? (
+                  <Link key={contact.image} to={contact.name} className='dropdown-item text-color'>
+                    {contact.name}
+                  </Link>
+                ) : searchedContactName && (
+                  <p className='dropdown-item text-secondary text-wrap text-break'>
+                    No contact found with name <span className='not-found-text'>{`"${searchedContactName}"`}</span>
+                  </p>
+                )}
+              </div>
+            )}
 
-          {/* Dropdown Menu */}
-
-          {dropdownVisible && (
-            <ul className="dropdown-menu show list-group p-1 rounded" ref={dropdownRef} style={{ zIndex: 1050, marginTop: '100px', minHeight: '50px' }}>
-              {contact ? (
-                <Link key={contact.image} to={contact.name} className='list-group-item text-primary border-0'>
-                  {contact.name}
-                </Link>
-              ) : searchedContactName && (
-                <p className='text-secondary'>no contact found </p>
-              )}
-            </ul>
-          )}
+          </div>
         </div>
+
 
 
         <ul className="list-group rounded-0">

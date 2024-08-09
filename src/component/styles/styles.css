@@ -16,3 +16,27 @@
     width: calc(100% - 2 * 0.5rem); /* Adjust according to padding/margins */
   }
   
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px; /* Width of the scrollbar */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f3f2f2; /* Background of the track */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #cfcfcf; /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounded corners */
+   
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #8685858f; /* Handle color on hover */
+  }
+  
+  .text-color {
+    color: rgb(32, 113, 233);
+  }
+  .not-found-text {
+    color: orangered;
+  }
