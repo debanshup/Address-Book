@@ -1,69 +1,95 @@
-# Getting Started with Create React App
+# Address Book
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a simple and user-friendly Address Book application developed with **React**. The application enables users to manage their contact information efficiently. Below is a detailed guide on the project.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Add Contacts:** Add new contacts with essential details such as name, email, and phone number.
+- **Edit Contacts:** Update existing contact information.
+- **Delete Contacts:** Remove contacts from the address book.
+- **Responsive Design:** Optimized for both mobile and desktop devices.
+- **Persistent Data:** Contacts are stored persistently using local storage or a backend (as applicable).
 
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+Follow these instructions to set up and run the project on your local machine for development and testing purposes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+Ensure you have the following installed on your local development environment:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Node.js** (v14 or higher)
+- **npm** or **yarn**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/debanshup/Address-Book.git
+   cd Address-Book
+2. **Install dependencies:**
+  ```bash
+  npm install
+3. **Start the development server:**
+  ```bash
+  npm start
 
-### `npm run eject`
+## Usage
+### Adding a Contact
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Navigate to the homepage.
+2. Fill out the form with the contact's **name**, **email**, and **phone number**.
+3. Click the **Add Contact** button to save the contact.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Viewing and Editing Contacts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Contacts will be listed on the homepage.
+2. To edit a contact, click the Edit button next to the contact. Modify the details in the form and save changes. 
+*(this feature is under development)*
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Deleting a Contact
+1. To delete a contact, click the Delete button next to the contact. Confirm the action in the prompt.
+*(this feature is under development)*
 
-## Learn More
+## Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. React: A JavaScript library for building user interfaces.
+2. React Router: Library for managing navigation in the application.
+3. HTML5: Markup language for structuring content on the web.
+4. CSS3: Stylesheet language used for describing the look and formatting of a document written in HTML.
+5. JavaScript (ES6+): Scripting language used to create dynamic content.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-### Code Splitting
+`/src/`
+    `components/` - Contains React components like `ContactForm`, `ContactList`, etc.
+    `utils/` - Utility functions.
+`App.js`  - The root component that integrates all other components.
+`index.js`- Entry point for the React application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+Contributions are welcome! Please follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Fork the repository.**
+2. **Create a new branch:** 
+   ```bash
+   git checkout -b feature-branch
+3. **Commit your changes:**
+   ```bash
+   git commit -m 'Add new feature'
+4. **Push to the branch:**
+   ```bash
+   git push origin feature-branch
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
