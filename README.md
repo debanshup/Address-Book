@@ -30,7 +30,7 @@ Follow these instructions to set up and run the project on your local machine fo
 Ensure you have the following installed on your local development environment:
 
 - **Node.js** (v14 or higher)
-- **npm** or **yarn**
+- **npm**
 
 ## Installation
 
