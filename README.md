@@ -40,7 +40,7 @@ Ensure you have the following installed on your local development environment:
    cd Address-Book
 2. **Install dependencies:**
    ```bash
-   npm install
+   npm install [dependency]
    
 3. **Start the development server:**
    ```bash
