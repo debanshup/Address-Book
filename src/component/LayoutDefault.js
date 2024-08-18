@@ -5,7 +5,7 @@ const LayoutDefault = () => {
     <div className='container'>
         <p className="h2 text-muted">No contact selected</p>
         <p className="text-muted">
-            select a name from the list
+            select a name from the list or search
         </p>
     </div>
   )

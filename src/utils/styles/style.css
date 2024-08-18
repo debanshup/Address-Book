@@ -15,3 +15,6 @@
 .br {
     /* border-radius: 5px; */
 }
+.hover-custom-bg:hover {
+    background-color: aliceblue;
+}

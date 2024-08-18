@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Outlet, useNavigate, } from 'react-router-dom'
 import { getContactDetails } from '../utils/renderContacts'
+import { getQualifiedName } from '../utils/formatter/getFormattedContact'
 const Details = () => {
     const { name } = useParams()
     const contact = getContactDetails(name)
@@ -15,7 +16,7 @@ const Details = () => {
 
     const handleInputChange = (e) => {
         // console.log(contact.name);
-        
+
 
         const { name, value } = e.target
 
@@ -41,14 +42,14 @@ const Details = () => {
 
     // alert(contact)
     useEffect(() => {
-      
-        
-    
-      return () => {
-        
-      }
+
+
+
+        return () => {
+
+        }
     }, [])
-    
+
     if (contact !== null) {
         return (
             <div className='container-fluid row'>
@@ -82,17 +83,21 @@ const Details = () => {
                     {
                         isEditing ? (
                             <>
-                            <div>
-                            <img src={editableContact.image} alt="contact_img" className="img-fluid rounded" />
-                            </div>
-                                <p className="h6">Image:
-                                    <input type="file"
-                                        className='form-control'
-                                        name='avatar'
-                                        alt='avatar'
-                                        onChange={handleInputChange}
-                                    />
-                                </p>
+                                <div>
+                                    <img src={editableContact.image} alt="contact_img" className="img-fluid rounded" />
+                                </div>
+                                <div className="h6 lh-lg">
+                                    <>
+                                        <label htmlFor="">Image</label>
+                                        <br />
+                                        <input type="file"
+                                            className='form-control'
+                                            name='avatar'
+                                            alt='avatar'
+                                            onChange={handleInputChange}
+                                        />
+                                    </>
+                                </div>
                             </>
                         ) : (
                             <img src={contact.image} alt="contact_img" className="img-fluid rounded" />
@@ -101,60 +106,83 @@ const Details = () => {
                     }
                 </div>
                 <div className="col-12 col-md-7">
-                    <p className="h6">Name:
+                    <div className="h6 lh-lg">
                         {isEditing ? (
-                            <input
+                            <>
+                                <label htmlFor="">First Name:</label>
+                                <input
 
-                                type="text"
-                                name="name"
-                                value={editableContact.name}
-                                onChange={handleInputChange}
-                                className="form-control"
+                                    type="text"
+                                    name="name"
+                                    value={editableContact.firstName}
+                                    onChange={handleInputChange}
+                                    className="form-control"
 
-                            />
+                                />
+                                <label htmlFor="">Last Name:</label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    value={editableContact.lastName}
+                                    onChange={handleInputChange}
+                                    className="form-control"
+
+                                />
+                            </>
                         ) : (
-                            <span className="fw-bold"> {name}</span>
+                            <span className="fw-bold">{getQualifiedName(contact.firstName, contact.lastName)}</span>
                         )}
-                    </p>
-                    <p className="h6">Mobile:
+                    </div>
+                    <div className="h6 lh-lg">
                         {isEditing ? (
-                            <input
-
-                                type="text"
-                                name="mobile"
-                                value={editableContact.mobile}
-                                onChange={handleInputChange}
-                                className="form-control"
-                            />
+                            <>
+                                <label htmlFor="">Mobile:</label>
+                                <input
+                                    type="text"
+                                    name="mobile"
+                                    value={editableContact.mobile}
+                                    onChange={handleInputChange}
+                                    className="form-control"
+                                />
+                            </>
                         ) : (
                             <span className="fst-italic fw-light"> {contact.mobile}</span>
                         )}
-                    </p>
-                    <p className="h6">Description:
+                    </div>
+                    <div className="h6 lh-lg">
                         {isEditing ? (
-                            <textarea
 
-                                name="description"
-                                value={editableContact.description}
-                                onChange={handleInputChange}
-                                className="form-control"
-                            />
+                            <>
+                                <label htmlFor="">Description:</label>
+
+                                <textarea
+
+                                    name="description"
+                                    value={editableContact.description}
+                                    onChange={handleInputChange}
+                                    className="form-control"
+                                />
+                            </>
                         ) : (
-                            <span className="fst-italic fw-light"> {contact.description}</span>
+                            <span className="fst-italic fw-light">  {contact.description}</span>
                         )}
-                    </p>
-                    <p className="h6">Address:
+                    </div>
+                    <div className="h6 lh-lg">
                         {isEditing ? (
-                            <textarea
-                                name="address"
-                                value={editableContact.address}
-                                onChange={handleInputChange}
-                                className="form-control"
-                            />
+                            <>
+                                <label htmlFor="">Address:</label>
+
+                                <textarea
+                                    name="address"
+                                    value={editableContact.address}
+                                    onChange={handleInputChange}
+                                    className="form-control"
+                                />
+                            </>
                         ) : (
                             <span className="fst-italic fw-light"> {contact.address}</span>
                         )}
-                    </p>
+                    </div>
                 </div>
 
             </div>
