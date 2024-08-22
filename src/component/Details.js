@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useParams, Outlet, useNavigate, } from 'react-router-dom'
 import { getContactDetails } from '../utils/renderContacts'
 import { getQualifiedName } from '../utils/formatter/getFormattedContact'
+import EditButton from './EditButton'
+import DeleteButton from './DeleteButton'
 const Details = () => {
     const { name } = useParams()
     const contact = getContactDetails(name)
@@ -11,12 +13,10 @@ const Details = () => {
     // change listeners
     const clickListener = (e) => {  // debugging purpose
         console.log(e.target.value);
-
     }
 
     const handleInputChange = (e) => {
         // console.log(contact.name);
-
 
         const { name, value } = e.target
 
@@ -30,6 +30,9 @@ const Details = () => {
     const handleEditClick = () => {
         setIsEditing(true)
         setEditableContact(contact) // set current contact editable
+    }
+    const handleDeleteClick = () => {
+        
     }
     const handleSaveClick = () => {
         // todo add save logic
@@ -68,14 +71,10 @@ const Details = () => {
                         <>
                             {/* edit btn */}
 
-                            <button className="btn btn-primary me-2" onClick={handleEditClick}>
-                                <i className='bi bi-pencil'></i>
-                            </button>
+                            <EditButton onClick={handleEditClick}/>
                             {/* delete btn */}
 
-                            <button className="btn btn-danger">
-                                <i className='bi bi-trash'></i>
-                            </button>
+                            <DeleteButton onClick={handleDeleteClick}/>
                         </>
                     )}
                 </div>
