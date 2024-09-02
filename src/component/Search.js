@@ -97,7 +97,8 @@ const Search = () => {
                                         <Link
                                             key={getQualifiedName(contact.firstName, contact.lastName)}
                                             className="list-group-item border-secondary border-opacity-25 hover-custom-bg "
-                                            to={getQualifiedName(contact.firstName, contact.lastName)}>
+                                            to={getQualifiedName(contact.firstName, contact.lastName)}
+                                            onClick={() => { setdropdownVisible(false); searchbarRef.current.value = ""; }}>
                                             {getQualifiedName(contact.firstName, contact.lastName)}
                                         </Link>
 
